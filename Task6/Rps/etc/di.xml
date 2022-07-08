@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Task6\Rps\Api\Data\RpsEntityInterface" type="Task6\Rps\Model\Rps" />
+    <preference for="Task6\Rps\Api\RpsEntityRepositoryInterface" type="Task6\Rps\Model\RpsEntityRepository" />
+
+    <type name="Task6\Rps\Model\Rps">
+        <plugin name="Rps_change_name" type="Task6\Rps\Plugin\Change" sortOrder="10" disabled="true" />
+    </type>
+
+    <preference for="Task6\Rps\Model\Rps" type="Task6\Rps\Plugin\Pre" />
+
+</config>
+
